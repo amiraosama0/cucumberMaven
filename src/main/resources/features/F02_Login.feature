@@ -2,7 +2,7 @@ Feature: users could use login functionality to use their acc
 
   Scenario: user could login with valid email and pass
     Given user go to login page
-    When user login with "amira.osama03655@gmeil.com" and "123456"
+    When user login with "amira.osama036555@gmeil.com" and "123456"
     When user press on login button
     Then  user login to the system successfully
 

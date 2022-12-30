@@ -42,7 +42,7 @@ public class D01_registerStepDef {
 
     @And("user enter validEmail")
     public void userEnterValidEmail() {
-        p01_register.email().sendKeys("amira.osama03655@gmeil.com");
+        p01_register.email().sendKeys("amira.osama036555@gmeil.com");
     }
 
     @And("user enter password & confirm password")

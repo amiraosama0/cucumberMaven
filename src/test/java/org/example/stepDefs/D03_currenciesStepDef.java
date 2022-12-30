@@ -10,10 +10,10 @@ public class D03_currenciesStepDef {
     P03_homePage p03homePage = new P03_homePage();
 
     @Then("fist option is dollar")
-    public void step1(){
-Select currList =new Select(p03homePage.customerCurrencyElement());
-String first0ption = currList.getFirstSelectedOption().getText();
-        Assert.assertEquals(first0ption,"US Dollar");
+    public void step1() {
+        Select currList = new Select(p03homePage.customerCurrencyElement());
+        String first0ption = currList.getFirstSelectedOption().getText();
+        Assert.assertEquals(first0ption, "US Dollar");
     }
 
     @Then("first option is dollar")
@@ -22,18 +22,17 @@ String first0ption = currList.getFirstSelectedOption().getText();
 
     @When("user select Euro option")
     public void userSelectEuroOption() {
-        Select currList =new Select(p03homePage.customerCurrencyElement());
+        Select currList = new Select(p03homePage.customerCurrencyElement());
         currList.selectByVisibleText("Euro");
     }
 
     @Then("price changed successfully")
     public void priceChangedSuccessfully() {
-for (int x=0;x<4;x++)
-{
-    String price = p03homePage.priceListElement(). get(x).getText();
-    System.out.println(x);
-    System.out.println(price);
-    Assert.assertTrue(price.contains("€"));
+        for (int x = 0; x < 4; x++) {
+            String price = p03homePage.priceListElement().get(x).getText();
+            System.out.println(x);
+            System.out.println(price);
+            Assert.assertTrue(price.contains("€"));
+        }
     }
-}
 }
